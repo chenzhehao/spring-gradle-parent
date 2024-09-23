@@ -1,5 +1,6 @@
 package com.chenzhehao.gradle.test.springbootgradletestone;
 
+import com.chenzhehao.gradle.test.springbootgradletestone.dto.TestDto;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,8 @@ public class SpringbootGradleTestOneApplication {
 
 	@RequestMapping("/")
 	public Object jvmboot(){
+		TestDto testDto = new TestDto();
+		testDto.setName("1");
 		return "success jvm";
 	}
 }
